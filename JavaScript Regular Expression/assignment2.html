@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            Assignment 2
+        </title>
+    </head>
+    <body>
+        <p>
+            The Phone Number must be entered only in the below formats:<br>
+            1. xxx-xxx-xxxx<br>
+            2. xxx.xxx.xxxx<br>
+            3. xxx xxx xxxx
+        </p>
+        <form name="myform" action="success.html" onsubmit="return validate()">
+            <label for="pno">Enter Phone Number </label>
+            <input type="text" name="pno">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            function validate()
+            {
+                let phnoCheck=/\d{3}(-|.| ){1}\d{3}(-|.| ){1}\d{4}/;
+                let phno=document.myform.pno.value;
+                let phnoValid=phnoCheck.test(phno);
+                if(!phnoValid)
+                {
+                    alert("The Phone number must be any of the specified formats");
+                    document.myform.pno.focus();
+                }
+                return phnoValid;
+            }
+        </script>
+    </body>
+</html>

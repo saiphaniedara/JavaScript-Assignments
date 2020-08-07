@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+            Assignment 2
+        </title>
+    </head>
+    <body>
+        <p>
+            The phone number must be in one of the below formats:<br>
+            1. xxx-xxx-xxxx<br>
+            2. xxx.xxx.xxxx<br>
+            3. xxx xxx xxxx
+        </p>
+        <br>
+        <form name="myform" onsubmit="return validate()" action="success.html">
+            <label for="phno">Enter Phone Number</label>
+            <input type="text" name="phno">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            function validate()
+            {
+                let phno=document.myform.phno.value;
+                let valid = false;
+                let len = phno.length;
+                if(len == 12)
+                {
+                    for (let index = 0; index < len; index++) {
+                        if(index == 3 || index == 7)
+                        {
+                            if(phno.charAt(index) != '-' && phno.charAt(index) != '.' && phno.charAt(index) != ' ')
+                            {
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            if(isNaN(phno.charAt(index)))
+                            {
+                                break;
+                            }
+                            if(index == 11)
+                            {
+                                valid=true;
+                            }
+                        }
+                    }
+                }
+                if(!valid)
+                {
+                    alert('The phone number must be entered in any of the specified formats. Please try again.');
+                }
+                return valid;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            Assignment 3
+        </title>
+    </head>
+    <body>
+        <label for="txt">Enter a String</label>
+        <input type="text" name="txt" id="txt">
+        <br>
+        <label for="num">Enter number of characters to remove</label>
+        <input type="number" name="num" id="num">
+        <br>
+        <button name="btn" onclick="removeChars()">Submit</button>
+        <h3 id="out"></h3>
+        <script>
+            function removeChars()
+            {
+                let txt=document.getElementById('txt').value;
+                let num=document.getElementById('num').value;
+                txt=txt.substring(0,txt.length-num);
+                document.getElementById('out').innerText=`The modified String is "${txt}"`;
+            }
+        </script>
+    </body>
+</html>

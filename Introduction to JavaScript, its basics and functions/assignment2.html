@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            Assignment 2
+        </title>
+    </head>
+    <body>
+        <input type="text" placeholder="Enter a number" id="num">
+        <br>
+        <button name="btn" onclick="reverse()">Submit</button>
+        <h3 id="h3"></h3>
+        <script>
+            function reverse()
+            {
+                let num= document.querySelector('#num').value;
+                let rev = '';
+                for(let i=num.length;i>=0;i--)
+                {
+                    rev+=num.charAt(i);
+                }
+                document.querySelector('#h3').innerText=`The reverse of ${num} is ${rev}.`;
+            }
+        </script>
+    </body>
+</html>

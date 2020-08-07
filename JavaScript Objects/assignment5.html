@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>
+            Assignment 5
+        </title>
+    </head>
+    <body>
+        <input type="text" id="txt" placeholder="Enter a String" onchange="toUpper()">
+        <script>
+            function toUpper()
+            {
+                let txt=document.getElementById('txt');
+                let str=txt.value;
+                txt.value=str.toUpperCase();
+            }
+        </script>
+    </body>
+</html>

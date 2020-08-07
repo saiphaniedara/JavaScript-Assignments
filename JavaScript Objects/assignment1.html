@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            Assignment 1
+        </title>
+    </head>
+    <body>
+        <input type="text" id="txt" placeholder="Enter a String">
+        <br>
+        <button name="btn" onclick="findOccurence()">Submit</button>
+        <h3 id='out'></h3>
+        <script>
+            function findOccurence()
+            {
+                let txt=document.getElementById('txt').value;
+                let index=txt.indexOf('world');
+                document.getElementById('out').innerText=`The String "${txt}" has "world" at position ${index}`;
+            }
+        </script>
+    </body>
+</html>

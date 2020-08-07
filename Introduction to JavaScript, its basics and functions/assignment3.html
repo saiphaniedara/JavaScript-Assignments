@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            Assignment 3
+        </title>
+    </head>
+    <body>
+        <input type="text" placeholder="Enter a String" id="inp">
+        <br>
+        <button name="btn" onclick="checkPalindrome()">Submit</button>
+        <h3 id="out"></h3>
+        <script>
+            function checkPalindrome()
+            {
+                let val= document.querySelector('#inp').value;
+                let rev= '';
+                for( let i = val.length;
+                i>=0;i--)
+                {
+                    rev+=val.charAt(i);
+                }
+                if(val === rev)
+                {
+                    document.querySelector('#out').innerText=`"${val}" is a Palindrome.`;
+                }
+                else{
+                    document.querySelector('#out').innerText=`"${val}" is not a Palindrome`;
+                }
+            }
+        </script> 
+    </body>
+</html>

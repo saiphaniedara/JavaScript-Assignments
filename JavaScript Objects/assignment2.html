@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            Assignment 2
+        </title>
+    </head>
+    <body>
+        <input type="text" id="inp" placeholder="Enter a String">
+        <br>
+        <button name="btn" onclick="convertCase()">Submit
+        </button>
+        <h3 id="out"></h3>
+        <script>
+            function convertCase()
+            {
+                let txt=document.getElementById('inp').value;
+                document.getElementById('out').innerText=`${txt.toUpperCase()}`;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            Assignment 3
+        </title>
+    </head>
+    <body>
+        <p>
+            The password must be 6 to 20 characters long and it must contain atleast one numeric digit, one uppercase and one lowercase letter.
+        </p>
+        <br>
+        <br>
+        <label for="pwd">
+            Enter Password 
+        </label>
+        <input type="text" id="pwd">
+        <br>
+        <button name="btn" onclick="checkPassword()">Submit</button>
+        <script>
+            function checkPassword()
+            {
+                let password=/((?=.*[A-Z])(?=.*\d)(?=.*[a-z])).{6,20}/;
+                let pwd=document.getElementById('pwd').value;
+                let pwdValid=password.test(pwd);
+                if(pwdValid)
+                {
+                    alert("Password is valid.");
+                }
+                else
+                {
+                    alert("Invalid Password. Please try again....");
+                }
+            }
+        </script>
+    </body>
+</html>

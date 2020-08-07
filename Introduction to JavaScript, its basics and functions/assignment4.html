@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            Assignment 4
+        </title>
+    </head>
+    <body>
+        <input type="text" placeholder="Enter a String" id="inp">
+        <br>
+        <button name="btn" onclick="capitalise()">Submit</button>
+        <h3 id="out"></h3>
+        <script>
+            function capitalise()
+            {
+                let val= document.querySelector('#inp').value;
+                let words= val.split(' ');
+                let ns='';
+                for(let i=0; i<words.length;i++)
+                {
+                    ns+=words[i].charAt(0).toUpperCase();
+                    ns+=words[i].substring(1);
+                    ns+=' ';
+                }
+                document.querySelector('#out').innerText=ns;
+            }
+        </script>
+    </body>
+</html>

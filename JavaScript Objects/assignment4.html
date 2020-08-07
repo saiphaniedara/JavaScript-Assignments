@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            Assignment 4
+        </title>
+    </head>
+    <body>
+        <label for="num1">Enter Number 1 </label>
+        <input type="number" name="num1" id="num1">
+        <br>
+        <label for="num2">Enter Number 2</label>
+        <input type="number" name="num2" id="num2">
+        <br>
+        <button name="btn" onclick="calculateSum()">Calculate</button>
+        <script>
+            function calculateSum()
+            {
+                let num1=Number(document.querySelector('#num1').value);
+                let num2=Number(document.querySelector('#num2').value);
+                let sum=num1+num2;
+                alert(`The sum of ${num1} and ${num2} is ${sum}.`);
+            }
+        </script>
+    </body>
+</html>

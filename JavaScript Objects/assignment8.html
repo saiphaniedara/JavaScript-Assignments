@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            Assignment 8
+        </title>
+    </head>
+    <body>
+        <h3 id="out"></h3>
+        <script>
+            let num=prompt('Please enter a number');
+            if(isNaN(num))
+            {
+                document.getElementById('out').innerText='Please enter a number';
+            }
+            else if(num%2===0)
+            {
+                document.getElementById('out').innerText='Entered number is Even';
+            }
+            else
+            {
+                document.getElementById('out').innerText='Entered number is odd';
+            }
+        </script>
+    </body>
+</html>

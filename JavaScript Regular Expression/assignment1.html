@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            Assignment 1
+        </title>
+    </head>
+    <body>
+        <form name="myform" action="success.html" onsubmit="return validate()">
+            <label for="mnum">Enter Member Number </label>
+            <input type="text" name="mnum">
+            <br>
+            <label for="pwd">Enter password </label>
+            <input type="text" name="pwd">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            function validate()
+            {
+                let num=/\d{1,}/;
+                let passw=/(\d|\D){5,}/;
+                let mnum=document.myform.mnum.value;
+                let pwd=document.myform.pwd.value;
+                let formValid=false;
+                let mnumValid=num.test(mnum);
+                console.log(mnumValid);
+                let pwdValid=passw.test(pwd);
+                console.log(pwdValid);
+                if(!mnumValid)
+                {
+                    alert("The Member number must be a number");
+                    document.myform.mnum.focus();
+                }
+                else if(!pwdValid)
+                {
+                    alert("The Password must be longer than 4 characters");
+                    document.myform.pwd.focus();
+                }
+                else
+                {
+                    formValid=true;
+                }
+                return formValid;
+            }
+        </script>
+    </body>
+</html>

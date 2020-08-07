@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+            Assignment 1
+        </title>
+    </head>
+    <body>
+        <form name="myform" onsubmit="return validate()" action="success.html">
+            <label for="mnum">Member Number</label>
+            <input type="text" id="mnum" name="mnum">
+            <br>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            function validate()
+            {
+                let num=document.getElementById('mnum').value;
+                let pass=document.getElementById('pwd').value;
+                let res= false;
+                if(num.length === 0)
+                {
+                    alert('Member Number must be entered');
+                    document.getElementById('mnum').focus();
+                }
+                else if(isNaN(num))
+                {
+                    alert('Member Number must be a numerical value');
+                    document.getElementById('mnum').focus();
+                }
+                else if(pass.length <= 4)
+                {
+                    alert("Password must be longer than 4 characters");
+                    document.getElementById('pwd').focus();
+                }
+                else
+                {
+                    res=true;
+                }
+                return res;
+            }
+        </script>
+    </body>
+</html>
